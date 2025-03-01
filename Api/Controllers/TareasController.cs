@@ -44,7 +44,7 @@ namespace Api.Controllers
 
         // PUT: api/Tareas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("edit/{id}")]
         public async Task<IActionResult> PutTarea(int id, Tarea tarea)
         {
             if (id != tarea.Id)
@@ -85,7 +85,7 @@ namespace Api.Controllers
         }
 
         // DELETE: api/Tareas/5
-        [HttpDelete("{id}")]
+        [HttpDelete("borrar/{id}")]
         public async Task<IActionResult> DeleteTarea(int id)
         {
             var tarea = await _context.Tareas.FindAsync(id);
